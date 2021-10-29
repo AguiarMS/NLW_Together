@@ -3,12 +3,23 @@ import { View, Text, Image } from "react-native";
 import IllustrationImg from '../../assets/illustration.png'
 import { styles } from "./style";
 import { ButtonIcon } from "../../compoments/ButtonIcon";
+import { useNavigation } from "@react-navigation/native";
+
 
 export function SingnIn() {
 
+  const navigation = useNavigation()
+
+
+  function handleSingIn() {
+    navigation.navigate('Home');
+  }
+
+
+
   return (
     <View style={styles.container}>
-      
+
       <Image
         source={IllustrationImg}
         style={styles.image}
@@ -28,8 +39,9 @@ export function SingnIn() {
         </Text>
 
 
-        <ButtonIcon title='Entrar com Discord' />
-
+        <ButtonIcon
+          title='Entrar com Discord'
+        />
       </View>
     </View>
 

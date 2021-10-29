@@ -6,8 +6,8 @@ import AppLoading from 'expo-app-loading'; 'expo-app-loading'
 
 import { SingnIn } from './src/screens/SignIn';
 import { StatusBar } from 'react-native';
+import { Routes } from './src/routes';
 import { Background } from './src/compoments/Background';
-import { Home } from './src/screens/Home';
 
 
 export default function App() {
@@ -31,7 +31,7 @@ export default function App() {
         backgroundColor='transparent'
         translucent // preenchimento no topo da tela
       />
-      <Home />
+      <Routes />
     </Background>
   );
 };
