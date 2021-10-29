@@ -41,6 +41,7 @@ export function SingnIn() {
 
         <ButtonIcon
           title='Entrar com Discord'
+          onPress={handleSingIn}
         />
       </View>
     </View>
