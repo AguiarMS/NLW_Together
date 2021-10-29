@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Text, Image, StatusBar } from "react-native";
+import { View, Text, Image } from "react-native";
 import IllustrationImg from '../../assets/illustration.png'
 import { styles } from "./style";
 import { ButtonIcon } from "../../compoments/ButtonIcon";
@@ -8,11 +8,7 @@ export function SingnIn() {
 
   return (
     <View style={styles.container}>
-      <StatusBar
-        barStyle='light-content'
-        backgroundColor='transparent'
-        translucent // preenchimento no topo da tela
-      />
+      
       <Image
         source={IllustrationImg}
         style={styles.image}
@@ -21,9 +17,9 @@ export function SingnIn() {
 
       <View style={styles.content}>
         <Text style={styles.title}>
-          Organize {`\n`}
-          suas jogatinas {`\n`}
-          facilmente
+          Conecte-se {'\n'}
+          e organize suas {'\n'}
+          jogatinas
         </Text>
 
         <Text style={styles.subtitle}>
@@ -32,11 +28,9 @@ export function SingnIn() {
         </Text>
 
 
-        <ButtonIcon title='Entrar com Discord'/>
+        <ButtonIcon title='Entrar com Discord' />
 
       </View>
-
-
     </View>
 
   );
