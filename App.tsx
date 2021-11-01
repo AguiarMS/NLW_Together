@@ -8,9 +8,14 @@ import { SingnIn } from './src/screens/SignIn';
 import { StatusBar } from 'react-native';
 import { Routes } from './src/routes';
 import { Background } from './src/compoments/Background';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { Home } from './src/screens/Home';
+
 
 
 export default function App() {
+
+
 
   // Variavel criada para carregar as fontes no dispositivo, caso as fontes nao carregar irá ficar na tela de loading com o splash.
   const [fontsLoaded] = useFonts({

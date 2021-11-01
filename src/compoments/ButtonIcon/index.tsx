@@ -10,11 +10,11 @@ type Props = RectButtonProps & {
 }
 
 
-export function ButtonIcon({ title, ...rest }: Props) {
+export function ButtonIcon({ title, ...rest } : Props) {
   return (
     <RectButton
       style={styles.container}
-      activeOpacity={0.7}
+      {...rest}
     >
       <View style={styles.iconWrapper}>
         <Image source={DiscordImg} style={styles.icon} />

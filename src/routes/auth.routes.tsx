@@ -2,8 +2,7 @@ import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { Home } from "../screens/Home";
 import { SingnIn } from "../screens/SignIn";
-import { Background } from "../compoments/Background";
-import { theme } from "../global/styles/theme";
+
 
 
 const {Navigator, Screen} = createNativeStackNavigator()
@@ -20,7 +19,7 @@ export function AuthRoutes(){
       }}
       
     >
-      <Screen 
+      <Screen
         name="SingIn"
         component={SingnIn}
       />
@@ -29,6 +28,7 @@ export function AuthRoutes(){
         name="Home"
         component={Home}
       />
+
     </Navigator>
   )
 }

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { View, Text, Image } from "react-native";
 import IllustrationImg from '../../assets/illustration.png'
 import { styles } from "./style";
@@ -6,13 +6,14 @@ import { ButtonIcon } from "../../compoments/ButtonIcon";
 import { useNavigation } from "@react-navigation/native";
 
 
+
 export function SingnIn() {
+
 
   const navigation = useNavigation()
 
-
-  function handleSingIn() {
-    navigation.navigate('Home');
+  function hanbleSignIn() {
+    navigation.navigate('Home')
   }
 
 
@@ -41,7 +42,7 @@ export function SingnIn() {
 
         <ButtonIcon
           title='Entrar com Discord'
-          onPress={handleSingIn}
+          onPress={hanbleSignIn}
         />
       </View>
     </View>
