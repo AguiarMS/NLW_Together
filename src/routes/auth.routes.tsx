@@ -2,31 +2,38 @@ import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { Home } from "../screens/Home";
 import { SingnIn } from "../screens/SignIn";
+import { AppointmentDetails } from "../screens/AppointmentDetails";
+import { theme } from "../global/styles/theme";
 
 
 
-const {Navigator, Screen} = createNativeStackNavigator()
+const { Navigator, Screen } = createNativeStackNavigator()
 
-export function AuthRoutes(){
-  return(
+export function AuthRoutes() {
+  return (
     <Navigator
       screenOptions={{
         headerShown: false,
         contentStyle: {
-          backgroundColor: 'transparent'
+          backgroundColor: theme.colors.secondary100
         }
-        
+
       }}
-      
+
     >
       <Screen
         name="SingIn"
         component={SingnIn}
       />
 
-      <Screen 
+      <Screen
         name="Home"
         component={Home}
+      />
+
+      <Screen
+        name="AppointmentDetails"
+        component={AppointmentDetails}
       />
 
     </Navigator>

@@ -9,10 +9,15 @@ import { ListHeader } from "../../compoments/ListHeader";
 import { FlatList } from "react-native-gesture-handler";
 import { Appointment } from "../../compoments/Appointment";
 import { ListDivider } from "../../compoments/ListDivider";
+import { Background } from "../../compoments/Background";
+import { useNavigation } from '@react-navigation/native'
 
 export function Home() {
 
   const [category, setCategory] = useState('')
+
+  const navigation = useNavigation();
+
 
   //FlatList
   const appointments = [
@@ -47,9 +52,13 @@ export function Home() {
     categoryId === category ? setCategory('') : setCategory(categoryId) // se o Id atual for o mesmo que esta sendo clicado ele vai desmarcar, caso contrario atribui um novo Id
   }
 
+  function handleAppointmentDetails(){
+    navigation.navigate('AppointmentDetails')
+  }
+
 
   return (
-    <View>
+    <Background>
       <View style={styles.header}>
         <Profile />
         <ButtonAdd />
@@ -71,7 +80,10 @@ export function Home() {
           data={appointments}
           keyExtractor={item => item.id} // a flatlist da um ID
           renderItem={({ item }) => (
-            <Appointment data={item} />
+            <Appointment 
+              data={item} 
+              onPress={handleAppointmentDetails}
+            />
           )}
           ItemSeparatorComponent={() => <ListDivider />}
           style={styles.matches}
@@ -79,6 +91,6 @@ export function Home() {
         />
 
       </View>
-    </View>
+    </Background>
   )
 }
